@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="chatstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Group Chat App</h1>
+        </div>  
+  
+    <div id="messagegroups">
+
+        <h2>Friends</h2>
+        <div id="persons"></div>
+        <h2>Your Groups</h2>
+        <div id="groups"></div>
+
+        <div class="message-container" id="messages">
+          <h1>Messages:</h1>
+        </div>
+
+        <!-- <div class="message-container" id="group-messages">
+          <h1>Group Messages:</h1>
+        </div> -->
+      
+      </div>
+      <form class ="send-container" id = "chat-form">
+        <input class="input-box" type="text" id="inputmessage" name="message" placeholder="Enter the message" required>
+        <button class="send-btn" type="submit">Send</button>
+        <input type ="hidden" id ="groupid">
+        <input type ="hidden" id ="personid">
+      </form>
+    
+      <div class = "group-settings" id="creategroups">
+
+        <form id = "creategrpform">
+          <label for="groupname">Group Name:</label>
+          <input type="text" name="groupname" id="grpname" required><br>
+          <button type="submit">Create Group</button>
+        </form>
+
+        <form id = "adduserform">
+          <label for="adduseremail">Enter the email id of the User to be Added : </label>
+          <input type="email" name="adduser" id="adduseremail"> <br>
+          <label for="makeadmin">Give Admin Access</label>
+          <input type="radio" name="makeadmin" id="makeadmin" value="on">
+          <label for="makeadmin">Give Normal Access</label>
+          <input type="radio" name="makeadmin" id="makeadmin" value="off"> <br>
+          <button type="submit">Add</button>
+        </form>
+
+        <form id="removeuserform">
+          <label for="removeuseremail">Enter the email id of the Member to be Removed :</label>
+          <input type="email" name="removemuser" id="removeuseremail"> <br>
+          <button type="submit">Remove User</button>
+        </form>
+
+      </div>  
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+
+</body>
+
+</html>

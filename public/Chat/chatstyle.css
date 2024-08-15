@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    /* margin: 0; */
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+
+  .message-container {
+    width: 80%;
+    max-width: 1200px;
+  
+    background-color: #eb1b1b;
+ 
+  }
+
+  .message-container div {
+    background-color: #CCC;
+    padding: 5px;
+  }
+
+  .message-container div:nth-child(2n) {
+    background-color: #FFF;
+  }
+
+.group-settings{
+margin : 50px 0;
+}
+
+.send-container {
+ 
+    padding-bottom: 30px;
+    background-color: white;
+    max-width: 1200px;
+    width: 80%;
+
+  }
+
+/* .send-container input {
+    flex-grow: 1;
+  } */
